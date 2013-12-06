@@ -5,100 +5,150 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <title>Project 3</title>
+  <title>Final Project</title>
   
+
   <link rel="stylesheet" href="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+  <link rel = "stylesheet"
+              type = "text/css"
+              href = "grid.css"/>
 
-
- 
   <script src="jquery.js"></script>
   <script src="jquery.mobile.js"></script>
+  <script src="myjava.js"></script>
 
-  <script type = "text/javascript">
-      function init() {
-
-          var statisticOwner;
-          var statisticOpponent;
-          var statisticTie;
-          
-
-          name = localStorage.getItem("name");
-          if (name == "null" || name == null) {
-              name = prompt("What is your name?");
-              localStorage.setItem("name", name);
-              alert("Hi, " + name + "!\nWelcome to Connect 4!");
-          } else {
-              alert("Hi, " + name + "!\nWelcome to Connect 4!");
-          }
-
-          statisticOwner = localStorage.getItem("statisticOwner");
-          if (statisticOwner == "null" || statisticOwner == null) {
-              statisticOwner = 0;
-              localStorage.setItem("statisticOwner", statisticOwner);
-          } else {
-              //do nothing
-          }
-
-          statisticOpponent = localStorage.getItem("statisticOpponent");
-          if (statisticOpponent == "null" || statisticOpponent == null) {
-              statisticOpponent = 0;
-              localStorage.setItem("statisticOpponent", statisticOpponent);
-          } else {
-              //do nothing
-          }
-
-          statisticTie = localStorage.getItem("statisticTie");
-          if (statisticTie == "null" || statisticTie == null) {
-              statisticTie = 0;
-              localStorage.setItem("statisticTie", statisticTie);
-          } else {
-              //do nothing
-          }
-          
-      }
-      function visitor() {
-          name = prompt("What is your name?");
-          localStorage.setItem("name", name);
-          alert("Hi, " + name + "!\nThat's your Connect 4!");
-      }
- 
-      function editor(){
-          alert("Matthias Maier\nFall Semester 2013\nIUPUI\nmatmaier@iupui.edu");
-      } 
-     
-  </script>
-   
 </head>
-<body onload="init()">
 
-<div data-role="page" id="page1">
-    <div data-theme="a" data-role="header" data-position="fixed">
-        <h1>
-            Connect Four
-        </h1>
-    </div>
-    <div data-role="content">
-        <a data-role="button" href="StartGame.html">
-                    Start Game
-        </a>
+
+<body onload="init()">
+    <div data-role="page" id="page1">
+        <div data-theme="a" data-role="header">
+            <a data-role="button" href="#page1" class="ui-btn-left" onclick="newGame()">
+                New Game
+            </a>
+            <h1>
+                Connect Four
+            </h1>
+            
+        </div>
+
+        <table data-role="content">
+           <tr>
+                 <th class="circle" id="a0"></th>
+                 <th class="circle" id="a1"></th>
+                 <th class="circle" id="a2"></th>
+                 <th class="circle" id="a3"></th>
+                 <th class="circle" id="a4"></th>
+                 <th class="circle" id="a5"></th>
+                 <th class="circle" id="a6"></th>
+           
+                <th>
+                    <a data-role="button" href="#page1" onclick="insert0()">
+                        <
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                 <th class="circle" id="a7"></th>
+                 <th class="circle" id="a8"></th>
+                 <th class="circle" id="a9"></th>
+                 <th class="circle" id="a10"></th>
+                 <th class="circle" id="a11"></th>
+                 <th class="circle" id="a12"></th>
+                 <th class="circle" id="a13"></th>
+           
+                <th>
+                    <a data-role="button" href="#page2" onclick="insert1()">
+                        <
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                 <th class="circle" id="a14"></th>
+                 <th class="circle" id="a15"></th>
+                 <th class="circle" id="a16"></th>
+                 <th class="circle" id="a17"></th>
+                 <th class="circle" id="a18"></th>
+                 <th class="circle" id="a19"></th>
+                 <th class="circle" id="a20"></th>
+                <th>
+                    <a data-role="button" href="#page2" onclick="insert2()">
+                        <
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                 <th class="circle" id="a21"></th>
+                 <th class="circle" id="a22"></th>
+                 <th class="circle" id="a23"></th>
+                 <th class="circle" id="a24"></th>
+                 <th class="circle" id="a25"></th>
+                 <th class="circle" id="a26"></th>
+                 <th class="circle" id="a27"></th>
+                <th>
+                    <a data-role="button" href="#page2" onclick="insert3()">
+                        <
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                 <th class="circle" id="a28"></th>
+                 <th class="circle" id="a29"></th>
+                 <th class="circle" id="a30"></th>
+                 <th class="circle" id="a31"></th>
+                 <th class="circle" id="a32"></th>
+                 <th class="circle" id="a33"></th>
+                 <th class="circle" id="a34"></th>
+                <th>
+                    <a data-role="button" href="#page2" onclick="insert4()">
+                        <
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                 <th class="circle" id="a35"></th>
+                 <th class="circle" id="a36"></th>
+                 <th class="circle" id="a37"></th>
+                 <th class="circle" id="a38"></th>
+                 <th class="circle" id="a39"></th>
+                 <th class="circle" id="a40"></th>
+                 <th class="circle" id="a41"></th>
+                <th>
+                    <a data-role="button" href="#page2" onclick="insert5()">
+                        <
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                 <th class="circle" id="a42"></th>
+                 <th class="circle" id="a43"></th>
+                 <th class="circle" id="a44"></th>
+                 <th class="circle" id="a45"></th>
+                 <th class="circle" id="a46"></th>
+                 <th class="circle" id="a47"></th>
+                 <th class="circle" id="a48"></th>
+                <th>
+                    <a data-role="button" href="#page2" onclick="insert6()">
+                        <
+                    </a>
+                </th>
+            </tr>
         
+        </table>
+
+    
+
+
+        <div data-theme="d" data-role="footer" data-position="fixed">
+            <a id="editor" data-role="button" data-theme="a" class="ui-btn-left" onclick="editor()">
+                Editor
+            </a>
+            <h3>
+            </h3>
+             <a id="visitor" data-role="button" data-theme="a" href="#page1" class="ui-btn-right" data-iconpos="right" onclick="visitor()">
+                Change my name
+            </a>
+        </div>
     </div>
-    <div data-role="content">
-        <a data-role="button" href="Highscores.html">
-                    Highscores
-        </a>
-        
-    </div>
-    <div data-theme="d" data-role="footer" data-position="fixed">
-        <a id="editor" data-role="button" data-theme="a" href="#page1" class="ui-btn-left" onclick="editor()">
-            Editor
-        </a>
-        <h3>
-        </h3>
-        <a id="visitor" data-role="button" data-theme="a" href="#page1" class="ui-btn-right" data-iconpos="right" onclick="visitor()">
-            Change my name
-        </a>
-    </div>
-</div>
 </body>
 </html>
