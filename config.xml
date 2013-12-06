@@ -8,11 +8,10 @@
 
   <!-- versionCode is optional and Android only -->
 
-  <name>Soccer Leagues in Germany</name>
+  <name>Connect 4</name>
 
   <description>
-    This App gives you an overview about all layers of german soccer leagues.
-    In addition you can get information about the 1.Bundesliga.
+    With this APP you can play the popular game Connect 4!
   </description>
 
   <author email="matmaier@iupui.edu">
